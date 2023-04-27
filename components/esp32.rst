@@ -108,6 +108,7 @@ of the ESP32 like ESP32S2, ESP32S3, ESP32C3 and single-core ESP32 chips.
         # Advanced tweaking options
         advanced:
           ignore_efuse_mac_crc: false
+          custom_mac_support: false
 
 Configuration variables:
 ------------------------
@@ -126,6 +127,8 @@ Configuration variables:
 
   - **ignore_efuse_mac_crc** (*Optional*, boolean): Can be set to ``true`` for devices on which the burnt in MAC address does not
     match the also burnt in CRC for that MAC address, resulting in an error like ``Base MAC address from BLK0 of EFUSE CRC error``.
+  - **custom_mac_support** (*Optional*, boolean): Can be set to ``true`` to add support for custom mac that can be burnt into efuse. 
+    More information on this process can be found in the `espressif documentaiton <https://docs.espressif.com/projects/esptool/en/latest/esp32/espefuse/burn-custom-mac-cmd.html>`.
 
 See Also
 --------
